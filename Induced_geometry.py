@@ -34,10 +34,10 @@ class Induced_geometry:
         R_c = np.empty((n,n,n,n),dtype=object)
         Γ = self.christoffel_symbol
         var = self.variables
-        for α in range(n):
-            for β in range(n):
-                for γ in range(n):
-                    for δ in range(n):
+        for δ in range(n):
+            for α in range(n):
+                for β in range(n):
+                    for γ in range(n):
                         R_c[δ,α,β,γ] = 0
                         for ϵ in range(n):
                             R_c[δ,α,β,γ] = R_c[δ,α,β,γ] + Γ[ϵ,α,γ]*Γ[δ,ϵ,β] - Γ[ϵ,α,β]*Γ[δ,ϵ,γ]                        
