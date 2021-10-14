@@ -1,14 +1,8 @@
-'''
-Use:
-from Induced_geometry import *
 import numpy as np 
-from sympy import * 
-from sympy.physics.mechanics import *
-init_vprinting()
-'''
+from sympy import *
 
 class Induced_geometry:
-    
+        
     def __init__(self,g,var):
         self.dimension = len(g)
         self.variables = var
